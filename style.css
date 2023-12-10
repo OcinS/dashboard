@@ -21,7 +21,7 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 320px repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 190px repeat(2, 1fr);
     grid-template-areas: 
     "sidebar header header"
     "sidebar main-content main-content"
@@ -95,6 +95,7 @@ li a:hover, section a:hover {
 /* Header Styles */
 
 header {
+    height: 100%;
     display: grid;
     grid-template-rows: repeat(2,1fr);
 }
