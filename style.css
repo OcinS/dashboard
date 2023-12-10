@@ -1,5 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Grid Layout */
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 320px repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar main-content main-content"
+    "sidebar main-content main-content";
+}
+
+.sidebar {
+    background-color: lightblue;
+    border: 1px solid black;
+    grid-area: sidebar;
+}
+
+.header {
+    background-color: lightgreen;
+    border: 1px solid black;
+    grid-area: header;
+}
+
+.main-content {
+    background-color: lightgray;
+    border: 1px solid black;
+    grid-area: main-content;
 }
