@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap');
 
+:root {
+    --white-color: #FFFCF9;
+    --blue-color: #26547C;
+    --dark-green-color: #062726;
+    --neon-color: #6BD425;
+    --gray-color: #DADFF7;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -21,19 +29,72 @@ body {
 }
 
 .sidebar {
-    background-color: lightblue;
-    border: 1px solid black;
+    background-color: var(--dark-green-color);
     grid-area: sidebar;
 }
 
 .header {
     background-color: lightgreen;
-    border: 1px solid black;
     grid-area: header;
 }
 
 .main-content {
     background-color: lightgray;
-    border: 1px solid black;
     grid-area: main-content;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+    color: var(--white-color);
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    gap: 40px;
+    font-size: 1.3rem;
+}
+
+section {
+    align-self: center;
+    margin-left: 20px;
+}
+
+section a {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    gap: 20px;
+}
+
+nav {
+    align-self: start;
+    display: grid;
+    gap: 60px;
+    margin-left: 20px;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+li a {
+    font-weight: 500;
+    color: var(--white-color);
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+li a:hover, section a:hover {
+    color: var(--neon-color);
+}
+
+/* Header Styles */
+
+header {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
